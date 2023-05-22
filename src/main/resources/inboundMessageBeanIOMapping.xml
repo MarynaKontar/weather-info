@@ -1,0 +1,12 @@
+<!--https://camel.apache.org/components/3.14.x/dataformats/beanio-dataformat.html-->
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+    <stream name="inputMessageStream" format="csv">
+        <record name="inboundAddress" class="com.example.weatherinfo.output.entity.Weather">
+            <field name="additionalInfo" minOccurs="1"/>
+            <field name="windDirection" minOccurs="1"/>
+            <field name="city" minOccurs="1"/>
+            <field name="province" minOccurs="1"/>
+            <field name="zip" minOccurs="1"/>
+        </record>
+    </stream>
+</beanio>

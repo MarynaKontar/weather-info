@@ -1,0 +1,9 @@
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo1', windDirection=NORTH, address=Address{city=' Kovacova', province=' Zvolen', zip=' 96237'}}
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo2', windDirection=EAST, address=Address{city=' Sielnica', province=' Banska Bystrica', zip=' 96232'}}
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo3', windDirection=SOUTHWEST, address=Address{city=' Sliac', province=' Banska Bystrica', zip=' 96237'}}
+OutBoundWeatherInfo{id=1, additionalInfo='additionalInfo3', windDirection=WEST, address=Address{city='Sliac', province='Banska Bystrica', zip='96237'}}
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo1', windDirection=NORTH, address=Address{city=' Kovacova', province=' Zvolen', zip=' 96237'}}
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo2', windDirection=EAST, address=Address{city=' Sielnica', province=' Banska Bystrica', zip=' 96232'}}
+OutBoundWeatherInfo{id=null, additionalInfo='additionalInfo3', windDirection=SOUTHWEST, address=Address{city=' Sliac', province=' Banska Bystrica', zip=' 96237'}}
+OutBoundWeatherInfo{id=1, additionalInfo='additionalInfo3', windDirection=WEST, address=Address{city='Sliac', province='Banska Bystrica', zip='96237'}}
+OutBoundWeatherInfo{id=1, additionalInfo='additionalInfo3', windDirection=WEST, address=Address{city='Sliac', province='Banska Bystrica', zip='96237'}}

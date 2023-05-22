@@ -1,0 +1,28 @@
+camel:
+  springboot:
+      main-run-controller: true
+
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/weatherdb?createDatabaseIfNotExist=true
+    password: password
+#    platform: weatherdb
+  jpa:
+    generate-ddl: 'true'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: weatherdb
+
+simple.timer.period: '50_000'
+legacy.from.location: 'src/data/input'
+legacy.to.location: 'src/data/output'
+legacy.input.file: 'inputFile.csv'
+legacy.output.file: 'outputFile.csv'
+
+
+

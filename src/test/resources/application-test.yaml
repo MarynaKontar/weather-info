@@ -1,0 +1,9 @@
+# doesn't work
+legacy.from.location: 'src/test/java/com.example.weatherinfo/data/input'
+legacy.to.location: 'src/test/java/com.example.weatherinfo/data/output'
+legacy.input.file: 'inputFile.csv'
+legacy.output.file: 'outputFile.csv'
+camel:
+  dataformat:
+    csv:
+      delimiter: ,
