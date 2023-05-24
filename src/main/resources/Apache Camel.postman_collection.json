@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "c07eb19a-5608-403e-b694-7d54870ae725",
+		"name": "Apache Camel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{host}}/{{api-prefix}}/weatherInfo 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"additionalInfo\":\"additionalInfo1\",\r\n    \"windDirection\": \"EAST\", \r\n    \"city\":\"Kovacova\", \r\n    \"province\":\"Zvolen\",\r\n    \"zip\":\"96237\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-prefix}}/weatherInfo",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-prefix}}",
+						"weatherInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/{{api-prefix}}/weatherInfo 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"additionalInfo\":\"additionalInfo2\",\r\n    \"windDirection\": \"NORTHEAST\",  \r\n    \"city\":\"Sielnica\", \r\n    \"province\":\"v\",\r\n    \"zip\":\"96232\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-prefix}}/weatherInfo",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-prefix}}",
+						"weatherInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/{{api-prefix}}/weatherInfo 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"additionalInfo\":\"additionalInfo3\",\r\n    \"windDirection\": \"WEST\",  \r\n    \"city\":\"Sliac\", \r\n    \"province\":\"Banska Bystrica\",\r\n    \"zip\":\"96237\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-prefix}}/weatherInfo",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-prefix}}",
+						"weatherInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"name\":\"some order\",\r\n\r\n\"price\":1000\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/getOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"getOrders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "api-prefix",
+			"value": "api/weather",
+			"type": "default"
+		}
+	]
+}

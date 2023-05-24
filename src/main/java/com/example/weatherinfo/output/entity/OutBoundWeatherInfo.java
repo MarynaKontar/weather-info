@@ -7,11 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class OutBoundWeatherInfo {
+@NamedQueries({@NamedQuery(name="OutBoundWeatherInfo_fetchAll", query = "Select x from OutBoundWeatherInfo x")})
+public class OutBoundWeatherInfo implements Serializable {
+
+    private static final long serialVersionUID = -57028997632470799L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

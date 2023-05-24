@@ -1,9 +1,11 @@
 package com.example.weatherinfo.input.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Address
+public class Address implements Serializable
 {
+    private static final long serialVersionUID = -3538660537285717526L;
     private String city;
     private String province;
     private String zip;

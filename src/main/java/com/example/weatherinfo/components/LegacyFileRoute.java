@@ -10,6 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+/**
+ * read from one file and write to another
+ */
 @Component
 public class LegacyFileRoute extends RouteBuilder {
     public static final String LEGACY_FILE_ROUTE_ID = "legacyFileRouteId";
@@ -32,6 +35,5 @@ public class LegacyFileRoute extends RouteBuilder {
                 .convertBodyTo(String.class) // work the same as  exchange.getIn().setBody(fileData.toString()); can't save to file if exchange body isn't string
                 .to("file:{{legacy.to.location}}?fileName={{legacy.output.file}}&fileExist=append&appendChars=\n") // add &fileExist=append&appendChars=\n because in other way it will be recorded only the last row
                 .end();
-        System.out.println("Just to have debug point");
     }
 }

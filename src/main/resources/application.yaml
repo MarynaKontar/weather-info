@@ -1,6 +1,8 @@
+
 camel:
   springboot:
-      main-run-controller: true
+    main-run-controller: true
+    tracing: true
 
 spring:
   datasource:
@@ -8,21 +10,40 @@ spring:
     url: jdbc:postgresql://localhost:5432/weatherdb?createDatabaseIfNotExist=true
     password: password
 #    platform: weatherdb
+
+#  datasource:
+#    username: mkontar
+#    url: jdbc:mysql://localhost:3306/weatherdb?createDatabaseIfNotExist=true
+#    password: Password2023!
+
   jpa:
     generate-ddl: 'true'
     show-sql: 'true'
     hibernate:
       ddl-auto: create-drop
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:
       platform: weatherdb
+  activemq:
+    broker-url: tcp://localhost:61616
+    packages:
+      trust-all: true
+
 
 simple.timer.period: '50_000'
 legacy.from.location: 'src/data/input'
 legacy.to.location: 'src/data/output'
 legacy.input.file: 'inputFile.csv'
 legacy.output.file: 'outputFile.csv'
+
+rest.to.location: 'src/data/output'
+rest.restDb.file: 'restDb.csv'
+
+readWeatherInfo.timer.period: '30000'
+
+activemq.weather.queue: 'weather'
+activemq.weather.topic: 'weather.topic'
 
 
 
